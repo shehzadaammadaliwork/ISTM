@@ -37,10 +37,60 @@ This command will move the starter code to the **app-example** directory and cre
 
 ## Learn more
 
-To learn more about developing your project with Expo, look at the following resources:
+This app streamlines the workflow for field agents and tour operators. It supports role-based logins, QR code scanning for instant data access, and digital slip generation for easy record-keeping.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+✨ Features
+🔐 Secure Login – Authenticates via backend API, with real-time validation and alerts.
+
+🧠 Role-Based Access – Auto-redirects users based on roles like tour_operator, destination_agent.
+
+📦 Form Validation – Ensures only valid data gets submitted.
+
+⚙️ AsyncStorage – Stores tokens and user data securely.
+
+📸 QR Code Scanner – Uses the device camera to read and process QR codes with JSON autofill support.
+
+🧾 Generate Payment Slips – Auto-generate and save/share payment receipt views.
+
+🖼️ Save as Image – Capture any screen component as an image using react-native-view-shot.
+
+🌐 Cross-Platform – Runs on Android, iOS, and web using the same codebase.
+
+🛠️ Built with Expo Router – Easy navigation with file-based routing.
+
+🧪 Technologies Used
+Tech/Library	Purpose
+React Native (Expo)	Cross-platform mobile app development
+Expo Router	File-based navigation
+EAS (Expo Application Services)	Native builds and OTA updates
+AsyncStorage	Local persistent storage
+expo-camera / barcode-scanner	QR code scanning
+react-native-view-shot	Capture screen components as images
+ToastAndroid / Alert	Platform-specific feedback
+
+📲 QR Code Scanning
+QR codes are scanned using the device camera to:
+
+Autofill payment or departure data in forms
+
+Identify and route based on scanned content
+
+Provide error handling for invalid formats
+
+Works seamlessly with JSON-formatted QR payloads.
+
+📦 Deployment with EAS
+This project is EAS-ready for native builds and OTA updates.
+
+🛠️ Project Structure
+app/
+├── index.tsx
+├── login.tsx         # Login screen with validation
+├── departures/       # Screen for tour_operator role
+├── NavigationListing # Screen for destination_agent role
+├── QrCardScreen.tsx  # Render card with QR
+├── SlipScreen.tsx    # Render payment receipt
+└── components/       # Shared UI components
 
 ## Join the community
 
